@@ -242,3 +242,7 @@ ros2 launch opencv_2d_camera opencv_color_detection.launch.py
 ============= Lowerbody Tracking ==============
 
 ros2 launch opencv_2d_camera opencv_lowerbody_detection.launch.py
+
+roscore
+rosrun rviz rviz
+roslaunch kuka_arm load_urdf.launch
