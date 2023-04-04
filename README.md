@@ -250,5 +250,4 @@ rosdep update
 
 source /opt/ros/foxy/setup.bash
 
-
-not found: "/home/iron/ros2_ws/install/teb_local_planner/share/teb_local_planner/local_setup.bash
+colcon version-check
