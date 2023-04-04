@@ -248,3 +248,6 @@ sudo apt install ros-foxy-desktop python3-rosdep2
 
 rosdep update
 
+source /opt/ros/foxy/setup.bash
+
+
