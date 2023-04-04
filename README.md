@@ -251,3 +251,5 @@ rosdep update
 source /opt/ros/foxy/setup.bash
 
 colcon version-check
+
+https://automaticaddison.com/how-to-install-ros-2-foxy-fitzroy-on-ubuntu-linux/
