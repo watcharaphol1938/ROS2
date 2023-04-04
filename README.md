@@ -246,3 +246,5 @@ ros2 launch opencv_2d_camera opencv_lowerbody_detection.launch.py
 -------------------------------------------------------------------------------------------------------------------------
 sudo apt install ros-foxy-desktop python3-rosdep2
 
+rosdep update
+
