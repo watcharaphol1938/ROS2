@@ -257,3 +257,5 @@ ros2 launch opencv_2d_camera opencv_color_detection.launch.py
 ros2 launch opencv_2d_camera opencv_lowerbody_detection.launch.py
 
 ######################################################################################################
+
+https://www.sciencedirect.com/science/article/pii/S1569190X21001271
