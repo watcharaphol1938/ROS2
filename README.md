@@ -267,3 +267,51 @@ https://6river.com/what-are-automated-guided-vehicles/
 https://www.anylogic.com/blog/how-to-build-a-simple-agv-charging-model-for-warehousing-and-manufacturing/
 
 https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-fleet-management-software
+
+######################################################################################################
+
+---------------------- ROS2 ----------------------
+
+- Introduction
+
+- Slide >> Issues from using ROS
+  - ROS wasn't designed to support a system of multiple robots due to its used of a single master node
+  - The paradigm of coomunication wasn't design to support realtime operation
+  - ROS was designed so that the resources should be local contains within the the computer for optimal performance
+  - ROS was essentially a centralized system wich isn't designed to support fleet mnagement
+
+
+- Slide >> Some of many benefits of ROS2
+  - Utilized Data Distribution System instead of TCPROS
+  - Support multiple operating system such as linux, Windows, and OSX
+  - Launch files can be writen using Python script
+
+
+- Slide >> ROS2 Distro
+  - ROS Package
+
+
+- Slide >> Navigating Linux  Terminal
+
+
+- Slide >> Linux : File System & Path
+  - "Directory" : where one can keep their files or other sub-directories
+  - "File" : a content that requires an extension. (.jpg, .py, .cpp)
+  - "Data file" : contains data that can be read or written by an editor or other programs.
+  - "Executable file" : can be executed to perform certain tasks(s)
+  - "Path" : describe the location of a directory or file.
+
+
+- Slide >> Common questions one should ask themselves
+  - Which files does our system need?
+  - How can we make sure that the system will use the correct files regardless of the computer of the computer it was installed on?
+  - What should the system behave when the required file does not exist?
+
+
+- Slide >> Ubuntu : Terminal & Command
+  - One can execute a command in a terminal.
+
+
+- Slide >> Ubuntu : Common Command
+  - List all installed ROS package
+    - apt list ros-humble* -- install
