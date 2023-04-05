@@ -259,3 +259,5 @@ ros2 launch opencv_2d_camera opencv_lowerbody_detection.launch.py
 ######################################################################################################
 
 https://www.sciencedirect.com/science/article/pii/S1569190X21001271
+
+https://www.researchgate.net/publication/346641010_A_Review_of_Recent_Advances_in_Automated_Guided_Vehicle_Technologies_Integration_Challenges_and_Research_Areas_for_5G-Based_Smart_Manufacturing_Applications
