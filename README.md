@@ -265,3 +265,5 @@ https://www.researchgate.net/publication/346641010_A_Review_of_Recent_Advances_i
 https://6river.com/what-are-automated-guided-vehicles/
 
 https://www.anylogic.com/blog/how-to-build-a-simple-agv-charging-model-for-warehousing-and-manufacturing/
+
+https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-fleet-management-software
