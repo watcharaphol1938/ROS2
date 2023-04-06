@@ -268,6 +268,8 @@ https://www.anylogic.com/blog/how-to-build-a-simple-agv-charging-model-for-wareh
 
 https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-fleet-management-software
 
+https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
+
 ######################################################################################################
 
 - Topic >> Getting Know ROS
