@@ -311,4 +311,3 @@ https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-
 
 - Topic >> Using ROS2 in terminal
   - The concept of Nodes and Topics
-    - 
