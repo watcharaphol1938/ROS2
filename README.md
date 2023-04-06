@@ -311,3 +311,17 @@ https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-
 
 - Topic >> Using ROS2 in terminal
   - The concept of Nodes and Topics
+    - Node : process
+    - Topic : communication channel
+    - Publisher : publish a message to a topic
+    - Subcriber : subscribe a message from a topic
+    - Each node shouldn't have both a publisher and a subscription
+  - The concept of message
+    - message is an operation command that subscriber brings it to operate
+  - The concept of service
+    -  1-1 communication
+    -  Suitable for more private communication that happens once in a while
+    -  provides service to a service client from other nodes.
+  - The concept of ROS2 Parameter
+    - Parameter is a constant that is associated with that particular node (ค่าคงที่ที่เกี่ยวข้องกับ node นั้นๆ)
+    - It can be modified and accessed by terminal interface
