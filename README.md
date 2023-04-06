@@ -297,3 +297,18 @@ https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-
     - Utilize Data Distribution System instead of TCPROS
     - Support multiple operating system such as linux, Windows, and OSX
     - Launch files can be writen using Python script
+  - ROS2 Distributions
+    - A ROS distribution is a versioned set of ROS packages
+
+- Topic >> Navigating Linux Terminal
+  - File System & Path
+    - Explains about information in file system and path
+    - Example : Directory, File, Data file, Executablbe file, Path
+  - Terminal & Command
+    - Using command in terminal to manages file
+  - Bash Programming
+    - Finding a file in system. If the system can't find it will generate a new file in system
+
+- Topic >> Using ROS2 in terminal
+  - The concept of Nodes and Topics
+    - 
