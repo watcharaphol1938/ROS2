@@ -314,4 +314,4 @@ https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-
 
 - Slide >> Ubuntu : Common Command
   - List all installed ROS package
-    - apt list ros-humble* -- install
+    - apt list ros-humble* --install
