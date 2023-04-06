@@ -284,11 +284,16 @@ https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-
   - ROS community package
     - global_planner, rviz, map_server, gazebo, camera_calibration, aruco_detect, ros_control
   - Physical System/Simulation
-    - Physical System uses less power or resource : Because A computer runs only physical robot
-    - Simulation uses more power or resource : Because A computer uses a lot of resource to build simulation in computer and physical robot
+    - Physical System uses less power or resource : Because A computer runs only robot
+    - Simulation uses more power or resource : Because A computer uses a lot of resource to build simulation in computer and robot
 
 - Topic >> Introduction to ROS2
-  - ROS was not designed to support a system of multiple robots due to its used of a single master node.
-  - ROS was designed so that the resources should be local (contains within the computer) for optimal performance.
-  - The paradigm of communication was not design to support realtime operation.
-  - ROS was essentially a centralized system, which is not designed to support fleet management.
+  - Issuesfromusing ROS
+    - ROS was not designed to support a system of multiple robots due to its used of a single master node.
+    - ROS was designed so that the resources should be local (contains within the computer) for optimal performance.
+    - The paradigm of communication was not design to support realtime operation.
+    - ROS was essentially a centralized system, which is not designed to support fleet management.
+  - Some of many benefits of ROS2
+    - Utilize Data Distribution System instead of TCPROS
+    - Support multiple operating system such as linux, Windows, and OSX
+    - Launch files can be writen using Python script
