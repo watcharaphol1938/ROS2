@@ -6,7 +6,7 @@ https://www.vmware.com/products/workstation-player.html
 
 https://releases.ubuntu.com/focal/
 
-# 1. Set locale #
+# 1. Set locale
 
 locale
 
@@ -19,6 +19,8 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 locale
+
+#
 
 # 2. Set sources
 
@@ -34,6 +36,8 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
+#
+
 # 3. Install ROS2 packages 
 
 sudo apt update
@@ -44,13 +48,14 @@ sudo apt install ros-foxy-desktop python3-rosdep2
 
 rosdep update
 
+#
+
 # 4. Environment setup 
 
 source /opt/ros/foxy/setup.bash
 
 rosversion -d
 
-#
 
 # Secure Shell 
 
