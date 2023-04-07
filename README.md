@@ -6,9 +6,7 @@ https://www.vmware.com/products/workstation-player.html
 
 https://releases.ubuntu.com/focal/
 
-#
-
-# 1. Set locale 
+# 1. Set locale #
 
 locale
 
