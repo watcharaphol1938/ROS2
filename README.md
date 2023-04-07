@@ -6,7 +6,7 @@ https://www.vmware.com/products/workstation-player.html
 
 https://releases.ubuntu.com/focal/
 
-########################################################################################
+#
 
 =============== 1. Set locale ==================
 
@@ -57,7 +57,7 @@ rosversion -d
 
 ================================================
 
-#######################################################################################
+#
 
 ======== Secure Shell ===========
 
@@ -101,7 +101,7 @@ export ROS_DOMAIN_ID=99
 
 source .bashrc
 
-#####################################################################################
+#
 
 ===== add /opt/ros/foxy/setup.bash to bashrc =====
 
@@ -183,7 +183,7 @@ colcon build --symlink-install
 
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 
-#####################################################################################
+#
 
 ========== Cartographer SLAM ==========
 ----------- Remote terminal -----------
@@ -203,7 +203,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ros2 run nav2_map_server map_saver_cli -f ~/<Map_path/map's_name>
 
-##############################################################################################
+#
 
 ============ Navigation ==============
 ---------- Remote terminal -----------
@@ -218,7 +218,7 @@ ros2 launch ironx_navigation navigation.launch.py map:=~/<Map_path/map's_name>
 
 ros2 launch ironx_navigation navigation.launch.py use_omni:=true map:=~/<Map_path/map's_name>
 
-#################################################################################################
+#
 
 ============= Camera Streaming ================
 -------- On Remote Desktop(NoMachine) ---------
@@ -256,7 +256,7 @@ ros2 launch opencv_2d_camera opencv_color_detection.launch.py
 
 ros2 launch opencv_2d_camera opencv_lowerbody_detection.launch.py
 
-######################################################################################################
+#
 
 https://www.sciencedirect.com/science/article/pii/S1569190X21001271
 
@@ -270,7 +270,7 @@ https://wewo-techmotion.com/solutions/automatic-guided-vehicle/agv-software/agv-
 
 https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
 
-######################################################################################################
+#
 
 - What is AMR?
   - Autonomous mobile robots (AMRs) are robotic vehicles that operate without the need for human control or intervention
@@ -308,7 +308,7 @@ https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
 - Kind of AMR?
 - Structure of AMR?
 
-######################################################################################################
+#
 
 - Topic >> Getting Know ROS
   - ROS is a actual software framework for developing systems
