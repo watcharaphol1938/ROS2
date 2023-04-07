@@ -330,3 +330,4 @@ https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
   - The concept of action
     - 1-1 communication
     - Suitable for task that requirestime to complete such as planning, optimizing, navigating, etc.
+    - A node can have an action server that execute an "action", then return the result to the client.
