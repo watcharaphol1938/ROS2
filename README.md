@@ -272,6 +272,12 @@ https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
 
 ######################################################################################################
 
+- What is AMR?
+- Kind of AMR?
+- Structure of AMR?
+
+######################################################################################################
+
 - Topic >> Getting Know ROS
   - ROS is a actual software framework for developing systems
   - A cluster of computer
