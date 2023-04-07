@@ -327,3 +327,6 @@ https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
   - The concept of ROS2 Parameter
     - Parameter is a constant that is associated with that particular node (ค่าคงที่ที่เกี่ยวข้องกับ node นั้นๆ)
     - It can be modified and accessed by terminal interface
+  - The concept of action
+    - 1-1 communication
+    - Suitable for task that requirestime to complete such as planning, optimizing, navigating, etc.
