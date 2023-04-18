@@ -281,7 +281,7 @@ https://ubuntu.com/blog/guide-to-autonomous-mobile-robots
 - Structure of AMR?
 
 # ROS2
-
+# Lecture 1 : ROS2 Fundamentals
 - Topic >> Getting Know ROS
   - ROS is an actual software framework for developing systems
     - ROS เป็นกรอบโครงสร้าง software ที่ใช้ในการพัฒนาระบบ
@@ -559,3 +559,45 @@ field itself muststart with lowercase letter.
   - Multithread Execution
     - การดำเนินการหลายเธรด
   - Callback Groups
+
+# Lecture 2 : Launch Engineering
+- Topic >> Launch Script & Launch Action
+  - สคริปเปิดใช้งาน (Launch Script) และการกระทำเปิดใช้งาน (Launch Action)
+  - Launch Filesin ROS2
+    - ไฟล์เปิดใช้งาน (Launch Files) ใน ROS2
+    - A (ROS2) Launch file allows a user to run a system with multiple ROS nodes or other launch files at once. One can also scheduling the system's behavior as well.
+      - ไฟล์เปิดใช้งาน (Launch Files) ของ ROS2 ช่วยให้ผู้ใช้สามารถเรียกใช้ระบบที่ประกอบด้วยโหนดหลายๆ โหนดของ ROS หรือไฟล์เปิดใช้งานอื่นๆ พร้อมกันได้ นอกจากนี้ยังสามารถกำหนดตารางเวลาเพื่อควบคุมพฤติกรรมของระบบได้อีกด้วย
+  - Writing Launch file in ROS(1)
+    - เขียนไฟล์เปิดใช้งาน (Launch file) ใน ROS1
+  - Writing Launch file in ROS2 with XML
+    - เขียนไฟล์เปิดใช้งาน (Launch file) ใน ROS2 ด้วย XML
+  - XML Launch file Structure
+    - โครงสร้างของไฟล์เปิดใช้งาน (Launch file) ในรูปแบบ XML
+  - Python Launch File Structure
+    - โครงสร้างของไฟล์เปิดใช้งาน (Launch file) ในรูปแบบ Python
+  - Executing command in Launch Script
+    - การดำเนินคำสั่งในสคริปเปิดใช้งาน (Launch Script)
+  - Package Layout
+    - โครงสร้างแพคเกจ (Package Layout)
+- Topic >> Executable Arguments & ROS2 Parameters
+  - อาร์กิวเมนต์ของโปรแกรมที่สามารถเรียกใช้งานได้และพารามิเตอร์ของ ROS2
+  - Arguments & Parameters of a ROS Node
+    - อาร์กิวเมนต์และพารามิเตอร์ของโหนดใน ROS
+    - "ROS2 Parameter(s)" is designed to be adjustable during runtime.
+      - พารามิเตอร์ของ ROS2" ถูกออกแบบมาเพื่อให้สามารถปรับเปลี่ยนได้ระหว่างการทำงาน (runtime)
+    - "Argument(s)" of an executable is assigned and used at the beginning of the execution.
+      - "อาร์กิวเมนต์" ของโปรแกรมที่สามารถเรียกใช้งานได้ถูกกำหนดและใช้งานที่จุดเริ่มต้นของการทำงาน
+  - ROS2 Parameters
+    - พารามิเตอร์ของ ROS2
+    - Instead of being a standalone value in a ROS network, ROS2 Parameters must be associated with a node.
+      - ใน ROS2 Parameters ไม่ใช่ค่าแบบเดี่ยวของระบบ ROS แต่จะต้องถูกผูกกับโหนด (node) เพื่อใช้งาน
+    - One can declare parameters in rclpy.Node
+      - สามารถประกาศพารามิเตอร์ใน rclpy.Node
+  - Assigning Parameters and Argumentsin Launch File
+    - กำหนดค่าพารามิเตอร์และอาร์กิวเมนต์ในไฟล์เปิดใช้งาน (Launch File)
+- Topic >> Data Deserialization
+  - การแปลงข้อมูลกลับเป็นรูปแบบเดิม (Data Deserialization)
+  - Passing Parameters Manually
+    - การส่งพารามิเตอร์ด้วยวิธีกำหนดเอง (Passing Parameters Manually)
+  - AutomaticDeserializationfrom YAML file
+    - การแปลงข้อมูลอัตโนมัติจากไฟล์ YAML (Automatic Deserialization from YAML file)
