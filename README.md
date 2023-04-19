@@ -3,6 +3,8 @@
 Dell XPS 15, ASUS ROG Zephyrus S GX701, Lenovo ThinkPad X1 Extreme Gen 3
 # PC
 HP Z840 Workstation, Dell Precision 7920 Tower Workstation, Lenovo ThinkStation P920
+# Single Board Computer
+Raspberry Pi 4 Model B, NVIDIA Jetson Nano, Odroid XU4
 # Installing
 
 https://www.vmware.com/products/workstation-player.html
