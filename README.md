@@ -599,5 +599,19 @@ field itself muststart with lowercase letter.
   - การแปลงข้อมูลกลับเป็นรูปแบบเดิม (Data Deserialization)
   - Passing Parameters Manually
     - การส่งพารามิเตอร์ด้วยวิธีกำหนดเอง (Passing Parameters Manually)
-  - AutomaticDeserializationfrom YAML file
+  - Automatic Deserialization from YAML file
     - การแปลงข้อมูลอัตโนมัติจากไฟล์ YAML (Automatic Deserialization from YAML file)
+  - YAML Formatfor ROS2 Parameters
+    - รูปแบบ YAML สำหรับพารามิเตอร์ ROS2
+ใน ROS2 มีการใช้ YAML เป็นรูปแบบสำหรับการกำหนดค่าพารามิเตอร์ (parameters) ซึ่งเป็นไฟล์ข้อความที่ใช้ในการกำหนดค่าต่าง ๆ ของโหนด (node) ใน ROS2 โดยทั่วไปแล้ว YAML จะถูกใช้ในการกำหนดค่าพารามิเตอร์ที่มีขนาดใหญ่และมีโครงสร้างที่ซับซ้อน เช่น พารามิเตอร์สำหรับคอนฟิกของหุ่นยนต์
+  - get_package_share_directory
+    - get_package_share_directory เป็นฟังก์ชันใน ROS2 ที่ใช้ในการดึงตำแหน่งของไดเรกทอรี share ของแพ็กเกจ (package) ที่กำลังใช้งานอยู่ เพื่อให้สามารถเข้าถึงไฟล์ที่เก็บอยู่ในไดเรกทอรีนั้นได้อย่างสะดวก
+    - To get the full path to the file, one must get the path to the "installed" package [NOT the 
+one in src].
+      - หากต้องการรับเส้นทางที่แน่นอนของไฟล์ที่เก็บในแพ็กเกจ (package) ใน ROS2 จะต้องดึงตำแหน่งของไดเรกทอรีที่ติดตั้งแล้ว (installed package) ไม่ใช่ตำแหน่งของไดเรกทอรีใน src ที่อยู่ในโฟลเดอร์ของโปรเจ็กต์ ROS2 ของเรา
+การติดตั้งแพ็กเกจจะนำเข้าโค้ดและไฟล์ของแพ็กเกจนั้น ๆ เข้าสู่ไดเรกทอรีของ ROS2 ซึ่งสามารถหาได้โดยใช้คำสั่ง rospack find หรือ ament find โดย ament เป็นคำสั่งใน ROS2 ที่ใช้ค้นหาแพ็กเกจที่ติดตั้งแล้วโดยอัตโนมัติ
+    - "get_package_share_directory" allows the software to automatically return the full path to 
+the path with the given name.
+      - ฟังก์ชัน get_package_share_directory ใน ROS2 ช่วยให้ซอฟต์แวร์สามารถคืนค่าเส้นทางแบบอัตโนมัติไปยังไดเรกทอรี share ของแพ็กเกจ (package) ที่ระบุไว้
+    - "os.path.join" append the string together as an appropriate path (with /).
+      - ฟังก์ชัน os.path.join ใน Python ช่วยให้เราสามารถเชื่อมต่อเส้นทาง (path) ของไฟล์หรือไดเรกทอรีในระบบไฟล์ของเครื่องคอมพิวเตอร์ โดยอัตโนมัติเลือกตัวแบ่งเส้นทางที่ถูกต้องตามระบบปฏิบัติการที่ใช้งานอยู่ ซึ่งในระบบปฏิบัติการ Windows จะใช้ \ และใน macOS หรือ Linux จะใช้ /
