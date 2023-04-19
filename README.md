@@ -626,10 +626,165 @@ Global Namespace จะเป็นการกำหนดชื่อที่
     - Name หมายถึงชื่อหรือตัวระบุของอ็อบเจ็กต์ (object) ใน ROS2 โดย Name จะถูกใช้เพื่อระบุตำแหน่งของอ็อบเจ็กต์ใน ROS2 โดยมีการใช้งาน Name ในหลายๆ ส่วนของ ROS2 เช่น ชื่อโหนด (node) ชื่อเซอร์วิส (service) ชื่อโปรแกรม (package) เป็นต้น.
 การตั้งชื่อให้ถูกต้องและเหมาะสมเป็นสิ่งสำคัญในการออกแบบและพัฒนาระบบ ROS2 เพราะชื่อจะช่วยให้เราสามารถระบุตำแหน่งของอ็อบเจ็กต์ได้อย่างถูกต้อง โดยสามารถใช้งาน Name ในหลายๆ รูปแบบ เช่น Private Namespace และ Global Namespace เพื่อให้ชื่อมีความสอดคล้องกับโครงสร้างระบบและงานที่ต้องการทำ
 นอกจากนี้การตั้งชื่อให้ถูกต้องและเหมาะสมยังช่วยให้ง่ายต่อการเข้าใจและการใช้งานของระบบ ROS2 โดยผู้ใช้งานสามารถระบุตำแหน่งของอ็อบเจ็กต์ได้อย่างง่ายดาย และไม่ต้องสับสนในการเรียกใช้งานในตอนต่อไป
-    - Absolute name refers to a name that cannot be modified by other name token.
-      - Absolute name หมายถึงชื่อที่ไม่สามารถแก้ไขได้โดย Name token อื่น ๆ ใน ROS2 นั่นคือชื่อที่ถูกกำหนดไว้และไม่มีวิธีการเปลี่ยนแปลง ซึ่งจะช่วยให้เราสามารถระบุตำแหน่งของอ็อบเจ็กต์ใน ROS2 ได้อย่างถูกต้องและสามารถใช้งานได้เหมือนเดิมตลอดเวลา.
+      - Absolute name refers to a name that cannot be modified by other name token.
+        - Absolute name หมายถึงชื่อที่ไม่สามารถแก้ไขได้โดย Name token อื่น ๆ ใน ROS2 นั่นคือชื่อที่ถูกกำหนดไว้และไม่มีวิธีการเปลี่ยนแปลง ซึ่งจะช่วยให้เราสามารถระบุตำแหน่งของอ็อบเจ็กต์ใน ROS2 ได้อย่างถูกต้องและสามารถใช้งานได้เหมือนเดิมตลอดเวลา.
 การใช้งาน Absolute name มักจะใช้ในกรณีที่ต้องการระบุตำแหน่งของอ็อบเจ็กต์ใน ROS2 แบบแน่นอน โดยไม่มีความเปลี่ยนแปลงใดๆ ทั้งสิ้น เช่น ในการระบุตำแหน่งของโหนด (node) หรือเซอร์วิส (service) ที่ต้องการใช้งานโดยต้องระบุชื่ออย่างแน่นอน.
 การใช้งาน Absolute name นอกจากจะช่วยให้เราระบุตำแหน่งของอ็อบเจ็กต์ได้อย่างถูกต้องแล้ว ยังช่วยให้เราสามารถเรียกใช้งานอ็อบเจ็กต์ที่ต้องการได้ง่ายขึ้น และลดความสับสนในการใช้งานของระบบ ROS2
-        - Topic : /pose
-          - Topic ชื่อ /pose ใน ROS2 เป็นหนึ่งใน Topic ที่สามารถใช้งานได้แบบ Real-time ซึ่งใช้สำหรับส่งข้อมูลตำแหน่ง (Position) และทิศทาง (Orientation) ของอ็อบเจ็กต์ (Object) จากหนึ่งโหนด (Node) ไปยังโหนดอื่นๆ ในระบบ ROS2.
+          - Topic : /pose
+            - Topic ชื่อ /pose ใน ROS2 เป็นหนึ่งใน Topic ที่สามารถใช้งานได้แบบ Real-time ซึ่งใช้สำหรับส่งข้อมูลตำแหน่ง (Position) และทิศทาง (Orientation) ของอ็อบเจ็กต์ (Object) จากหนึ่งโหนด (Node) ไปยังโหนดอื่นๆ ในระบบ ROS2.
 Topic ชื่อ /pose นั้นมักจะถูกใช้งานในหลายๆ แอปพลิเคชัน ROS2 เพื่อให้สามารถรับ-ส่งข้อมูลตำแหน่งและทิศทางของอ็อบเจ็กต์ระหว่างโหนดได้อย่างมีประสิทธิภาพ ในการใช้งานจริง เราสามารถตั้งชื่อ Topic ตามที่เราต้องการได้ แต่ /pose เป็นชื่อ Topic ที่นิยมใช้งานมากในโครงการ ROS2 ด้วยความสามารถของ Topic นี้ในการควบคุมการเคลื่อนไหวของหุ่นยนต์หรือโดรนได้อย่างมีประสิทธิภาพและแม่นยำ
+      - Relative name refers to a name that can be modified by other name token.
+        -  ชื่อที่เป็นแบบ "Relative name" ใน ROS2 คือชื่อที่สามารถปรับเปลี่ยนได้โดย token ชื่ออื่น ๆ ภายในที่อยู่ namespace เดียวกัน ซึ่ง namespace ใน ROS2 คือกลุ่มของโหนด (Node) ที่เรียงต่อกันโดยมีเครื่องหมาย / คั่นระหว่างชื่อโดเมน (domain) กับชื่อโหนด (Node) เช่น /my_domain/my_node
+
+        - การใช้ Relative name นั้นช่วยให้เราสามารถเข้าถึง Topic หรือ Node ได้อย่างสะดวกสบายโดยไม่ต้องระบุที่อยู่ของ Node หรือ Topic ทั้งหมดในชื่อ ในการเข้าถึง Relative name นั้นจะใช้เครื่องหมายจุด (.) ในการเชื่อมต่อชื่อของ Node หรือ Topic ใน Namespace เดียวกัน ยกตัวอย่างเช่นถ้าเรามี Node ชื่อ my_node ภายใต้ Domain ชื่อ my_domain และมี Topic ชื่อ my_topic ภายใต้ Node ดังกล่าว ในการเข้าถึง Topic นั้นเราสามารถใช้ชื่อที่เป็น Relative name ได้เช่น my_node.my_topic โดยไม่ต้องระบุ Namespace ตั้งแต่ต้น
+        -  Topic : pose
+            - Topic ใน ROS2 เป็นช่องทางในการสื่อสารระหว่าง Node ซึ่งสามารถส่งข้อมูลได้ในรูปแบบของ message ต่าง ๆ โดยเฉพาะอย่างยิ่งในการควบคุมหุ่นยนต์หรือการติดตามตำแหน่งของหุ่นยนต์
+
+            - Topic ชื่อ pose นั้นอาจมีหลายๆ แบบกันในแต่ละโปรเจ็กต์ขึ้นอยู่กับว่าผู้พัฒนาได้ตั้งชื่อไว้อย่างไร โดยทั่วไปแล้ว Topic ชื่อ pose จะใช้ในการสื่อสารข้อมูลเกี่ยวกับตำแหน่ง และทิศทางหรือการหมุนของหุ่นยนต์ เช่น ตำแหน่ง x, y, z และความเร็วและองศาของการหมุน (Roll, Pitch, Yaw) ของหุ่นยนต์ ในการเข้าถึง Topic ชื่อ pose นั้นสามารถใช้คำสั่ง rostopic หรือเขียนโค้ด Node ในภาษา Python หรือ C++ เพื่อส่งหรือรับข้อมูลผ่าน Topic ได้ตามต้องการ
+      - Private name refers to a name that will be automatically add its associated node in front.
+        - ใน ROS2 มีการใช้ Private Namespace เพื่อช่วยในการจัดการ Namespace ในกรณีที่มี Node หลายๆ ตัวที่มีชื่อ Topic หรือ Service ซ้ำกัน โดย Private Namespace จะเป็นการเพิ่ม prefix ของชื่อ Node ที่เรียกใช้งาน Topic หรือ Service ต่างๆ เพื่อให้ชื่อเหล่านั้นไม่ซ้ำกัน
+
+        - เมื่อเราสร้าง Node ใน ROS2 แล้ว จะมีการกำหนดชื่อ Node ได้ เช่น my_node ถ้าหากเราต้องการใช้ Private Namespace เราสามารถเพิ่ม _ ไปหลังชื่อ Node เพื่อให้เป็น Private Namespace ได้ เช่น my_node_ ดังนั้น Topic ที่มีชื่อว่า /pose จะถูกแทนด้วย /my_node_/pose โดย Private Namespace นั้นจะถูกเพิ่มให้อัตโนมัติต่อท้ายชื่อ Topic หรือ Service เมื่อ Node นั้นๆ เข้าถึงในส่วนของ Topic หรือ Service นั้นๆ และ Private Namespace นั้นจะช่วยลดความซ้ำซ้อนของชื่อ Topic หรือ Service ในระบบ ROS2
+        - Topic : ~/pose
+          - ใน ROS2 มีการใช้ Tilde (~) ในการสร้าง Private Namespace ซึ่งเป็นวิธีที่สะดวกและช่วยให้ลดความซ้ำซ้อนของชื่อ Topic หรือ Service ในระบบ ROS2 ได้
+
+          - เมื่อเราสร้าง Node ใน ROS2 แล้ว จะมีการกำหนดชื่อ Node ได้ เช่น my_node ถ้าหากเราต้องการใช้ Tilde (~) เราสามารถเพิ่ม ~ ไปหลังชื่อ Node เพื่อให้เป็น Private Namespace ได้ เช่น /my_node ดังนั้น Topic ที่มีชื่อว่า /pose จะถูกแทนด้วย /pose โดย Tilde () จะถูกเพิ่มให้อัตโนมัติต่อท้ายชื่อ Topic หรือ Service เมื่อ Node นั้นๆ เข้าถึงในส่วนของ Topic หรือ Service นั้นๆ และ Tilde () นั้นจะช่วยลดความซ้ำซ้อนของชื่อ Topic หรือ Service ในระบบ ROS2 อีกด้วย
+      - Hidden name refers to a name that will be hidden in ROS API interface.
+        - ชื่อที่ซ่อนไว้ (Hidden Name) เป็นชื่อที่จะไม่ปรากฏใน ROS API interface ของ ROS ซึ่งจะถูกนำมาใช้ในกรณีที่ต้องการใช้ชื่อที่ไม่ถูกเผยแพร่หรือเข้าถึงได้ง่าย โดยมักจะใช้สำหรับชื่อ Topic, Service, Parameter หรือ Node เพื่อป้องกันไม่ให้ชื่อเหล่านี้ถูกเข้าถึงจากผู้ใช้งานที่ไม่ได้รับอนุญาตหรือไม่มีสิทธิ์ในการเข้าถึง
+
+        - การกำหนดชื่อที่ซ่อนไว้ใน ROS สามารถทำได้โดยการใช้ prefix ของชื่อด้วยสัญลักษณ์ underscore (_), ตัวอย่างเช่น
+
+        - _my_topic: ชื่อ Topic ที่ถูกซ่อนไว้ เมื่อผู้ใช้งานพยายามเข้าถึงจะไม่พบชื่อนี้ใน ROS API interface
+
+        - _my_service: ชื่อ Service ที่ถูกซ่อนไว้ เมื่อผู้ใช้งานพยายามเรียกใช้งานจะไม่พบชื่อนี้ใน ROS API interface
+ 
+        - การใช้ชื่อที่ซ่อนไว้สามารถช่วยป้องกันการเข้าถึงทรัพยากรต่างๆ ใน ROS จากผู้ใช้งานที่ไม่ได้รับอนุญาตหรือไม่มีสิทธิ์ในการเข้าถึง และช่วยเพิ่มความปลอดภัยให้กับระบบ ROS โดยรวม
+        - Topic : _pose
+          - Topic ที่ถูกตั้งชื่อว่า _pose จะเป็น Topic ที่ถูกซ่อนไว้ใน ROS API interface ซึ่งอาจถูกใช้สำหรับสื่อสารระหว่าง Node ในระบบ ROS เพื่อส่งหรือรับข้อมูลที่เกี่ยวข้องกับตำแหน่งและทิศทางของวัตถุหรือหุ่นยนต์ในพื้นที่ ซึ่งอาจมีการใช้งานอยู่ในหลายๆ งานต่างๆ เช่น งานทางด้านการสังเคราะห์ภาพ, หุ่นยนต์, และการทำ SLAM (Simultaneous Localization and Mapping) ฯลฯ
+
+          - การใช้ชื่อที่ถูกซ่อนไว้ (_pose) จะช่วยเพิ่มความปลอดภัยให้กับ Topic นี้ โดยไม่ให้ผู้ใช้งานทั่วไปเข้าถึงและแก้ไขข้อมูลที่ส่งหรือรับผ่าน Topic นี้ได้ และต้องมีสิทธิ์ในการเข้าถึงเท่านั้นที่จะสามารถเข้าถึง Topic นี้ได้
+    -  Namespace และ Uniform Resource Locators (URL)
+      - Namespace ใน ROS คือ การจัดกลุ่มของ Topic, Service, Parameter, Node และ Resource อื่นๆ ในชื่อเดียวกันเพื่อให้สามารถเข้าถึงและจัดการได้ง่ายขึ้น โดยทั่วไปแล้วจะใช้ชื่อเดียวกันสำหรับ Namespace และ Package ของ ROS เพื่อสร้างโครงสร้างของโปรเจค ROS ที่มีความเป็นระเบียบและเข้าใจง่าย
+
+      - Uniform Resource Locators (URL) เป็นตัวบอกที่อยู่ของทรัพยากรบนอินเทอร์เน็ต เช่นเว็บไซต์ ไฟล์ และฐานข้อมูล โดย URL จะประกอบด้วยโพรโตคอล (protocol) เช่น http, https, ftp, โดยมักจะเริ่มต้นด้วยชื่อโดเมน (domain name) หรือ IP address และจบลงด้วย path หรือ query string ที่ใช้ในการกำหนดทรัพยากรที่ต้องการเข้าถึง
+
+      - ใน ROS, URL สามารถใช้เพื่ออ้างอิงถึงทรัพยากรในระบบ ROS เช่น Topic, Service, Parameter ได้ โดย URL จะประกอบด้วย schema ที่ใช้ในการอ้างอิงทรัพยากรใน ROS เช่น "ros", "ros2" หรือ "package" ตามด้วยชื่อ Namespace และชื่อ Topic, Service หรือ Parameter ที่ต้องการอ้างถึง ตัวอย่างเช่น
+
+      - ros2://namespace/topic_name
+
+      - package://package_name/namespace/topic_name
+
+      - RL ที่ใช้ใน ROS สามารถช่วยให้เข้าถึงและจัดการทรัพยากรใน ROS ได้ง่ายขึ้น และช่วยเพิ่มความสะดวกในการอ้างถึงทรัพยากรต่างๆ ใน ROS อีกด้วย
+   -  Adding namespace in Launch file
+    -  การเพิ่ม Namespace ใน Launch file ใน ROS
+        1.เพิ่ม argument ในไฟล์ Launch เพื่อรับค่า Namespace ที่ต้องการ
+        2.นำ argument ที่รับค่ามาใช้ในการเรียก Node และ Topic โดยใช้ $(arg my_namespace)
+   -  Generalizing YAML for variable namespace
+    -  การทำให้ YAML สามารถรองรับ Namespace ที่เปลี่ยนแปลงได้เป็นตัวแปร สามารถทำได้โดยการใช้การ generalize
+        1. กำหนดตัวแปร Namespace ที่ต้องการเปลี่ยนแปลงในไฟล์ YAML
+        2. กำหนดตัวแปรสำหรับ topic, service และ parameter
+   -  Deserialization & Serialization
+    -  การ Deserialization และ Serialization เป็นกระบวนการที่ใช้ในการแปลงข้อมูลระหว่างระบบเครือข่ายแบบต่าง ๆ ให้เข้ากันได้ โดยใช้รูปแบบข้อมูลที่เหมาะสมกับแต่ละระบบ เช่น JSON, XML, YAML เป็นต้น
+
+    - การ Deserialization คือกระบวนการแปลงข้อมูลจากรูปแบบที่เหมาะสมกับการส่งข้อมูลผ่านระบบเครือข่าย เช่น JSON, XML, YAML ให้กลายเป็นข้อมูลในรูปแบบของโปรแกรมที่สามารถใช้งานได้ต่อไป เช่น Object, Array, หรือ Primitive Data Type ต่าง ๆ
+    - การ Serialization คือกระบวนการแปลงข้อมูลจากรูปแบบของโปรแกรม เช่น Object, Array, หรือ Primitive Data Type ต่าง ๆ ให้เป็นรูปแบบที่เหมาะสมกับการส่งข้อมูลผ่านระบบเครือข่าย เช่น JSON, XML, YAML เพื่อส่งไปยังอุปกรณ์หรือระบบเครือข่ายอื่น ๆ
+    - การ Deserialization และ Serialization เป็นกระบวนการสำคัญในการทำงานของ Node ใน ROS โดยจะเป็นการแปลงข้อมูลระหว่างแบบที่รองรับได้และแบบที่สามารถส่งได้เพื่อให้สามารถสื่อสารข้อมูลกันได้อย่างถูกต้องและมีประสิทธิภาพ
+   - Group Action
+    - Group Action เป็นการทำงานแบบเป็นกลุ่ม (group) ใน ROS ที่มีความซับซ้อนและความยืดหยุ่นสูงกว่า Action แบบธรรมดา ซึ่งสามารถสั่งการหลายๆ ภารกิจพร้อมกันได้ในรูปแบบของ Action Server กลุ่มหรือ Group Action Server
+
+    - Group Action จะมีหลายๆ ภารกิจ (goal) ที่สามารถดำเนินการพร้อมกันได้ แต่การทำงานแต่ละภารกิจอาจมีความซับซ้อนและยากมากขึ้น โดยในแต่ละภารกิจจะมีสถานะเป็นไปได้ 3 สถานะ ได้แก่ Preempted, Active และ Succeeded โดยในการทำงาน Group Action จะมี Goal ID เป็นตัวบอกว่าภารกิจนี้เป็นของกลุ่มใด โดยการส่ง Goal ID ไปยัง Action Server จะทำให้ Action Server รับภารกิจนี้และทำการตรวจสอบว่าภารกิจนี้เป็นของกลุ่มใด และเริ่มการทำงานของภารกิจใน Group Action นั้น
+
+    - Group Action นั้นมีความยืดหยุ่นและสามารถปรับเปลี่ยนได้ตามความต้องการ โดยสามารถสร้าง Action Server กลุ่มที่เหมาะสมกับงานที่ต้องการทำได้ อีกทั้งยังสามารถใช้งานได้ร่วมกับ Node อื่นๆ ใน ROS อย่างสมบูรณ์แบบ ซึ่งทำให้มีความยืดหยุ่นและสามารถใช้งานกับงานต่างๆ ได้หลากหลายใน ROS
+    - Instead of adding namespace manually to several nodes, one can use "GroupAction" to create a scope of the "launch" and use "PushRosNamespace" to add namespace to all subsequent nodes in the group.
+      - แทนที่จะเพิ่ม namespace ด้วยตนเองให้กับโหนดหลายๆ โหนด ผู้ใช้สามารถใช้ "GroupAction" เพื่อสร้างขอบเขตของ "launch" และใช้ "PushRosNamespace" เพื่อเพิ่ม namespace ให้กับโหนดทั้งหมดในกลุ่มที่กำหนด ดังนั้นการใช้ "GroupAction" จะช่วยลดความซ้ำซ้อนในการกำหนด namespace และช่วยให้การเขียน launch file สะดวกมากยิ่งขึ้น
+      
+- Topic >> Launch Argument
+  - Launch Argument เป็นเครื่องมือที่ใช้ในการส่งค่าตัวแปรหรือ parameter ให้กับโปรแกรมที่รันผ่าน launch file ใน ROS ซึ่งจะช่วยให้ผู้ใช้งานสามารถเปลี่ยนแปลงค่า parameter หรือตัวแปรต่างๆ ได้โดยไม่ต้องแก้ไขโปรแกรมโดยตรง
+
+  - เมื่อผู้ใช้งานกำหนด Launch Argument ใน launch file โดยใช้คำสั่ง <arg> และระบุชื่อตัวแปร โปรแกรมที่รันผ่าน launch file จะสามารถอ่านค่าตัวแปรนั้นๆ ได้จาก environment variable ซึ่งจะถูกสร้างขึ้นโดยโปรแกรม ROS launch
+
+  - การใช้ Launch Argument นั้นเป็นสิ่งสำคัญในการกำหนดค่า parameter หรือตัวแปรต่างๆ ให้กับโปรแกรม ROS โดยทั่วไปเมื่อเราต้องการรันโปรแกรมด้วยค่า parameter หรือตัวแปรที่แตกต่างกันในแต่ละครั้ง เราสามารถใช้ Launch Argument เพื่อสะดวกและรวดเร็วในการเปลี่ยนแปลงค่า parameter หรือตัวแปรต่างๆ ที่ต้องการใช้งานได้ในแต่ละครั้ง
+    - Argument(s) can be assigned when launching a launch file.
+      - ผู้ใช้งานสามารถกำหนด Argument ได้เมื่อรัน launch file โดยตัว Argument จะถูกกำหนดค่าเป็นตัวแปรเมื่อโปรแกรมรัน ซึ่งสามารถใช้ในการกำหนดค่า parameter หรือตัวแปรต่างๆ ให้กับโปรแกรมที่รันผ่าน launch file
+
+      - การกำหนด Argument นั้นสามารถทำได้โดยระบุชื่อ Argument พร้อมกับค่าที่ต้องการให้กับ Argument นั้นๆ เมื่อรัน launch file โดยใช้คำสั่ง "ros2 launch" โดยอาจมี Argument หลายตัวที่ต้องการกำหนดค่าได้ในครั้งเดียว
+    - Executable Arguments
+    - Executable Arguments คือ วิธีการกำหนด Argument ให้กับ executable โดยตรง เพื่อใช้ในการรันโปรแกรมที่เรียกใช้งานจาก launch file โดยไม่ต้องผ่าน parameter server หรือ arguments ของ launch file
+
+    - ใน ROS 2 สามารถกำหนด Executable Arguments ได้โดยใช้คำสั่ง "ros2 run" โดยระบุชื่อของ executable ตามด้วยชื่อ argument และค่าที่ต้องการกำหนดให้กับ argument นั้นๆ โดยใช้เครื่องหมาย "--" เป็นตัวคั่นระหว่างชื่อ argument และค่าที่ต้องการกำหนด
+    - ROS2 Parameters
+      - ROS2 Parameters เป็นวิธีที่ใช้ในการกำหนดค่าและการแชร์ค่าระหว่างโปรแกรมใน ROS 2 โดยที่ค่านั้นสามารถเปลี่ยนแปลงได้ระหว่างที่โปรแกรมกำลังทำงานอยู่
+
+      - ROS2 Parameters จะถูกเก็บไว้ใน Parameter Server ซึ่งเป็นโครงสร้างข้อมูลที่ทำหน้าที่เป็นแหล่งเก็บค่าของตัวแปรต่างๆ ในระบบ ROS 2 โดย Parameter Server จะเก็บค่าในรูปแบบของ key-value pairs ซึ่ง key จะเป็นชื่อของ parameter และ value จะเป็นค่าของ parameter นั้นๆ
+
+      - ROS2 Parameters สามารถกำหนดได้จากหลายแหล่ง เช่น launch file, command line arguments หรือโปรแกรมที่เขียนขึ้นมาเอง โดยในการกำหนด ROS2 Parameters จะใช้คำสั่ง rclcpp::Node::declare_parameter หรือ rclcpp::Node::declare_parameters ซึ่งใช้ในการกำหนด key และ default value ของ parameter นั้นๆ
+
+      - นอกจากนี้ ROS2 Parameters ยังมีการรองรับการแชร์ค่าระหว่างโปรแกรมด้วยกัน ซึ่งสามารถทำได้โดยการเข้าถึง Parameter Server จากโปรแกรมอื่น ๆ โดยใช้ rclcpp::Node::get_parameter หรือ rclcpp::Node::get_parameters ซึ่งใช้ในการเรียกดูค่าของ parameter นั้นๆ โดยจะสามารถอ่านค่า parameter ที่ตั้งค่าไว้จากโปรแกรมอื่น ๆ ได้ และยังสามารถอัปเดตค่า parameter ได้ด้วย rclcpp::Node::set_parameters ซึ่งใช้ในการกำหนดค่าของ parameter นั้นๆ โดยใช้ key ของ parameter 
+  - Adding Launch Arguments to the Launch file
+    - การเพิ่ม Launch Argument เข้าไปใน Launch file ใน ROS2 สามารถทำได้โดยการกำหนดชื่อของ Argument และ default value ของ Argument นั้น ๆ ในไฟล์ XML ของ Launch file
+    - DeclareLaunchArgument adds an ability to assign argument of the given name when launching.
+      - DeclareLaunchArgument เป็นคำสั่งในไฟล์ Launch file ของ ROS2 ที่ใช้สำหรับการประกาศ Launch Argument โดยเพิ่มคุณสมบัติการกำหนดค่า Argument นั้น ๆ เมื่อเราเรียกใช้งาน Launch file นั้น ๆ ด้วย command line interface ของ ROS2 โดย DeclareLaunchArgument จะกำหนดชื่อของ Argument และค่า default value ของ Argument นั้น ๆ
+    - LaunchConfiguration allows the Launch file to store and substitute value that is assigned to the variable.
+      - LaunchConfiguration เป็นคลาสใน Launch file ของ ROS2 ที่ใช้สำหรับการเก็บค่าและการแทนที่ค่าที่กำหนดให้กับตัวแปร โดยค่านี้สามารถถูกกำหนดโดยผู้ใช้งานผ่าน command line interface ของ ROS2 หรือผ่านไฟล์ launch ต่าง ๆ ที่เราเขียนขึ้นมาได้
+
+      - การใช้ LaunchConfiguration เพื่อกำหนดค่าสามารถทำได้โดยการสร้างออบเจ็กต์ LaunchConfiguration แล้วนำไปใช้กับตัวแปรที่ต้องการ
+  - What if
+    - Add both Launch arguments and Launch configurations 
+      - เพื่อเพิ่ม Launch arguments และ Launch configurations ในไฟล์ Launch เราสามารถใช้คลาส DeclareLaunchArgument และ Substitution จากแพคเกจ launch ใน ROS2 ได้
+    - Run turtlesim , kill the default turtle, and spawn leader and follower
+      - เพื่อรัน turtlesim และสร้าง leader และ follower turtle
+    - Modify the parameter file with the namespace
+      - การแก้ไขไฟล์ Parameter ด้วย Namespace
+
+      - ในการสร้างโปรแกรม ROS (Robot Operating System) แต่ละโปรแกรมจะต้องมีการกำหนดค่าต่าง ๆ สำหรับ Node (โปรแกรมย่อย) ต่าง ๆ ที่เกี่ยวข้องกับโปรแกรมหลัก โดยใช้ไฟล์ Parameter ซึ่งเป็นไฟล์ที่เก็บค่า default ของ Node แต่ละตัว
+
+      - ในบางกรณี หากมี Node ที่มีชื่อเหมือนกัน แต่ต้องการกำหนดค่าต่าง ๆ ให้แตกต่างกัน สามารถใช้ Namespace เพื่อแยกค่า default ของ Node แต่ละตัวได้
+    - Can we just turn Launch configuration to a string ?
+      - ใช้ Launch Configuration เป็นสตริงได้หรือไม่?
+
+       - ใน ROS (Robot Operating System) การสร้างและกำหนดค่าโปรแกรมโดยใช้ไฟล์ Launch Configuration มักจะเป็นวิธีการที่สะดวกและง่ายต่อการตั้งค่าโปรแกรม เนื่องจากไฟล์ Launch Configuration จะเก็บข้อมูลการกำหนดค่าของ Node แต่ละตัว รวมถึงการเชื่อมต่อ (Connection) ระหว่าง Node ที่เกี่ยวข้องกันไว้ด้วย
+
+       - แม้ว่า Launch Configuration จะเป็นไฟล์ XML แต่ก็ไม่สามารถเปลี่ยนเป็นสตริงได้โดยตรง หากต้องการใช้ Launch Configuration เป็นสตริง จะต้องใช้ไลบรารีหรือโมดูลที่เขียนขึ้นมาเองเพื่อแปลง Launch Configuration ให้กลายเป็นสตริง
+    - There is no function to convert LaunchConfiguration directly to string
+      - ใน ROS (Robot Operating System) ไม่มีฟังก์ชันที่สามารถแปลง Launch Configuration เป็นสตริงได้โดยตรง การแปลง Launch Configuration เป็นสตริงนั้นต้องใช้โมดูลหรือไลบรารีเพิ่มเติมที่เขียนขึ้นมาเอง
+      - ย่างไรก็ตาม มีโมดูล Python ชื่อ roslaunch2string ที่สามารถแปลง Launch Configuration เป็นสตริงได้
+  - What is an OpaqueFunction
+    - OpaqueFunction เป็นฟังก์ชันใน ROS (Robot Operating System) ที่ใช้สำหรับเรียกฟังก์ชันภายในไฟล์ Launch Configuration ซึ่งไม่ต้องการเรียกใช้ฟังก์ชันนั้นจากภายนอกไฟล์ Launch Configuration ได้ กล่าวคือ OpaqueFunction จะไม่สามารถเรียกใช้ได้จากภายนอกไฟล์ Launch Configuration หรือโปรแกรมอื่น ๆ
+    - OpaqueFunction is a class defined in launch.actions. One can associate an OpaqueFunction with another function, which can access a Launch context (LaunchContext class from launch).
+      - ข้อมูลนี้ไม่ถูกต้อง เนื่องจาก OpaqueFunction ไม่ใช่คลาสที่ถูกกำหนดไว้ใน launch.actions แต่เป็นอีกหนึ่งวิธีในการกำหนดฟังก์ชันในไฟล์ Launch Configuration ใน ROS (Robot Operating System)
+      - เราไม่สามารถเชื่อม OpaqueFunction กับฟังก์ชันอื่น ๆ ได้ เนื่องจาก OpaqueFunction มีลักษณะเป็นฟังก์ชันที่ไม่สามารถเรียกใช้งานได้จากภายนอกไฟล์ Launch Configuration หรือโปรแกรมอื่น ๆ
+    - One method of the class LaunchContext allows us to perform the substitution on any Launch configuration. This will convert the Launch configuration to Python string. However, this has to be done in the function. We will refer to this as “render_function”.
+      - วิธีการเรียกใช้งาน Launch configuration เพื่อแปลงเป็นสตริงของ Python ใช้ฟังก์ชัน render_substitutions ซึ่งเป็นเมท็อดของคลาส LaunchContext ในโมดูล launch.substitutions
+       - การใช้งาน render_substitutions จะต้องอยู่ในฟังก์ชัน ไม่สามารถเรียกใช้งานจากภายนอกได้ โดยต้องผ่าน LaunchContext เข้ามาใช้งาน
+  - Applying OpaqueFunction
+    - การใช้งาน OpaqueFunction ใน Launch file จะต้องกำหนด OpaqueFunction เป็น action ของ LaunchDescription โดยใช้คลาส ExecuteProcess และกำหนด cmd เป็น OpaqueFunction ที่ต้องการใช้งาน
+    - This launch can take ‘dummy’ as an argument and can pass it along to other functions that use the string version of ‘dummy’.
+      - เมื่อเราใช้ Launch file แล้วกำหนด argument เข้าไป แล้วส่งต่อไปยัง function อื่น ๆ ที่ใช้ Launch configuration ในรูปแบบของ Python string ได้แก่เหตุการณ์ที่เรียกว่า "substitution" ซึ่งจะทำให้เราสามารถส่งค่า arguments และ parameter ต่าง ๆ ไปยัง function อื่น ๆ ได้อย่างง่ายดาย
+  - Whatwe have now
+    - A Launch file that can run turtlesim_node, spawn the second turtle with a given name, run both via_point_follower, and turtle_follower. 
+      - รัน turtlesim_node และ spawn ตัวเต่าที่สอง โดยกำหนดชื่อให้ตัวเต่าที่สอง จากนั้นเรียกใช้งาน turtlesim_node, via_point_follower และ turtle_follower พร้อมกับส่งค่า parameter ต่าง ๆ ผ่าน arguments ได้
+    - It can take input arguments for spawn location and it can read parameters from a YAML file.
+      - รับ input arguments เพื่อกำหนดตำแหน่ง spawn ตัวเต่าและอ่าน parameter จากไฟล์ YAML ได้
+  - What if
+    - If a turtlesim_node is already run, do we have to write a new Launch file that contains almost exactly the same thing ?
+      - ไม่จำเป็นต้องเขียน Launch file ใหม่หากมี turtlesim_node ที่กำลังทำงานอยู่แล้ว สามารถเรียกใช้งาน turtlesim_node ที่กำลังทำงานอยู่ได้โดยการระบุชื่อ node นั้น ๆ ใน Command ของ ExecuteProcess ที่เกี่ยวข้อง
+    - Can we modify the existing Launch file so that it can take a flag which tell the file whether to run a new turtlesim ?
+      - ใช่ สามารถปรับแต่ง Launch file เพื่อรองรับการรัน turtlesim ใหม่โดยระบุ flag ได้
+      - หากต้องการรองรับการรัน turtlesim ใหม่โดยมี flag ที่ชื่อว่า run_new_turtlesim สามารถเพิ่ม Parameter และ Condition ใน Launch file เพื่อตรวจสอบค่าของ run_new_turtlesim และเรียกใช้ turtlesim_node ตามที่ต้องการได้
+  
+- Topic >> Conditioning
+  - Conditioning ในการพัฒนาซอฟต์แวร์คือการปรับปรุงโค้ดหรือโมดูลของโปรแกรมเพื่อให้มีความยืดหยุ่นและเป็นไปตามเงื่อนไขที่ต้องการ โดยทั่วไปแล้ว Conditioning มักเกี่ยวข้องกับการตรวจสอบเงื่อนไขของข้อมูล และการกำหนดการทำงานของโปรแกรมตามเงื่อนไขนั้นๆ
+
+  - ใน ROS2, Conditioning เป็นเรื่องสำคัญที่ช่วยให้โปรแกรมสามารถทำงานได้อย่างเหมาะสมกับเงื่อนไขต่างๆ ที่อาจเกิดขึ้นในสภาพแวดล้อมหรือการทำงาน โดยเฉพาะเมื่อมีการทำงานร่วมกันของหลายๆ Node ใน ROS2 ซึ่งอาจต้องการตรวจสอบและปรับปรุงเงื่อนไขต่างๆ เพื่อให้การทำงานของระบบ ROS2 เป็นไปได้อย่างเหมาะสม ยืดหยุ่น และมีประสิทธิภาพ
+
+  - เพื่อปรับปรุงการ Conditioning ใน ROS2 นักพัฒนาสามารถใช้เครื่องมือต่างๆ เช่น ROS Parameter, Launch File, ROS Action และ ROS Service เพื่อเพิ่มความยืดหยุ่นให้กับโปรแกรม และสามารถตรวจสอบและปรับปรุงเงื่อนไขต่างๆ ได้อย่างรวดเร็วและมีประสิทธิภาพ
+  - Using IfCondition
+    - IfCondition เป็นตัวเลือกที่นักพัฒนาสามารถใช้เพื่อปรับเปลี่ยนเงื่อนไขการทำงานของโปรแกรม ROS2 โดยอ้างอิงถึงค่า ROS Parameter หรือ Environment Variable ที่กำหนดไว้ในระบบ เมื่อ IfCondition ถูกใช้งาน โปรแกรม ROS2 จะตรวจสอบเงื่อนไขที่กำหนดไว้ และทำงานตามสถานะที่ได้รับค่า
+    - Using IfCondition
+      - การใช้งาน IfCondition สามารถนำมาใช้ในการกำหนดเงื่อนไขการทำงานของ Node, Topic, Service และ Action ของ ROS2 โดยสามารถกำหนดเงื่อนไขให้เป็น True หรือ False ด้วยการกำหนดค่า Parameter หรือ Environment Variable เพื่อควบคุมการทำงานของโปรแกรม ROS2 ให้เหมาะสมกับสภาพแวดล้อมหรือสถานการณ์ที่เกิดขึ้น
+      - Although the Launch actions are added to the Launch description, they will only be executed if the condition is "True".
+        - ข้อความดังกล่าวอาจเกี่ยวกับการใช้งาน IfCondition ในไฟล์ Launch description ของ ROS2 ซึ่งถูกใช้เพื่อควบคุมการเรียกใช้งาน Node, Topic, Service และ Action ของ ROS2 ให้เหมาะสมกับสภาพแวดล้อมหรือสถานการณ์ที่เกิดขึ้น
+        - ในการกำหนด Launch action ให้ใช้งาน IfCondition ใน Launch description ของ ROS2 นักพัฒนาสามารถใช้ตัวแปรในรูปแบบ ROS Parameter หรือ Environment Variable ในการกำหนดเงื่อนไขที่ต้องการ
+
+- Topic >> Printing/Logging in Launch file
+  - 
