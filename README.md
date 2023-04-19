@@ -1,15 +1,8 @@
 # ROS 2
 # Laptop
-https://www.bnn.in.th/th/p/notebook/thin-light-notebook/lg-gram/lg-gram-16z90r-gaf78a6-black-8806087951653_z33xj9
-https://www.bnn.in.th/th/p/notebook/thin-light-notebook/asus-thin-light-notebook/asus-vivobook-pro-16-k6602he-n1034w-blue-4711081941460_z73x61
-https://www.bnn.in.th/th/p/notebook/gaming-notebook/asus-gaming-notebook/asus-tuf-gaming-f17-fx707zc4-hx035w-gray-4711387078921_d8qoqx
-https://www.bnn.in.th/th/p/notebook/gaming-notebook/dell-gaming-notebook/dell-notebook-inspiron-g15-w566312600m2cth-g15-ds-w-grey-w566312600m2cth-g15-ds-w_dl6o0k
-https://www.bnn.in.th/th/p/notebook/gaming-notebook/asus-gaming-notebook/asus-notebook-rog-flow-z13-gz301ze-ld035ws-black-4711081613039_dy00gw
-https://www.bnn.in.th/th/p/notebook/gaming-notebook/msi-gaming-notebook/msi-cyborg-15-a12vf-010th-black-9s7-15k111-010_d8q3gy
-https://www.bnn.in.th/th/p/notebook/gaming-notebook/lenovo-gaming-notebook/lenovo-notebook-legion-5i-15iah7h-82rb00a1ta-storm-grey-196380131172_dke173
-https://www.bnn.in.th/th/p/notebook/gaming-notebook/asus-gaming-notebook/asus-tuf-gaming-f17-fx707zu4-hx019w-gray-4711387122341_dxnp46
+Dell XPS 15, ASUS ROG Zephyrus S GX701, Lenovo ThinkPad X1 Extreme Gen 3
 # PC
-https://www.bnn.in.th/th/p/desktop-and-all-in-one/gaming-desktop/acer-gaming-desktop/acer-desktop-tw-nitro-n50-640-12716g0tmgi-t003-4710886999195_zg3273
+HP Z840 Workstation, Dell Precision 7920 Tower Workstation, Lenovo ThinkStation P920
 # Installing
 
 https://www.vmware.com/products/workstation-player.html
