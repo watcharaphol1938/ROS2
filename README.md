@@ -1,10 +1,26 @@
 # ROS 2
+
 # Laptop
-Dell XPS 15, ASUS ROG Zephyrus S GX701, Lenovo ThinkPad X1 Extreme Gen 3
+- *Dell XPS 15
+  - https://www.dell.com/en-th/shop/sfc/sf/xps-laptops#models-module
+- ASUS ROG Zephyrus S GX701
+  - https://www.asus.com/th/laptops/for-gaming/rog-republic-of-gamers/filter?SubSeries=ROG-Zephyrus
+- Lenovo ThinkPad X1 Extreme Gen 3
+  - https://www.lenovo.com/th/th/laptops/thinkpad/thinkpad-x1/c/thinkpad-x1-series#compareSection
 # PC
-HP Z840 Workstation, Dell Precision 7920 Tower Workstation, Lenovo ThinkStation P920
-# Single Board Computer
-Raspberry Pi 4 Model B, NVIDIA Jetson Nano, Odroid XU4
+- HP Z840 Workstation
+  - https://www.hp.com/th-th/shop/desktops/business-desktops/z-workstations.html
+- *Dell Precision 7920 Tower Workstation
+  - https://www.dell.com/en-th/shop/sfc/sf/precision-desktops
+  - https://www.dell.com/en-th/shop/workstations/precision-7920-tower/spd/precision-7920-workstation
+- Lenovo ThinkStation P920
+
+# microcontroller
+https://micro.ros.org/docs/overview/hardware/
+
+# single-board computer
+https://all3dp.com/1/single-board-computer-raspberry-pi-alternative/
+
 # Installing
 
 https://www.vmware.com/products/workstation-player.html
