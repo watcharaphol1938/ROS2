@@ -17,9 +17,25 @@
 
 # microcontroller
 https://micro.ros.org/docs/overview/hardware/
+https://www.allonrobots.com/robot-microcontroller/
+https://jakobfriedl.tech/microcontrollers-in-robotics
+https://www.generationrobots.com/en/326-microcontrollers-and-development-boards
 
 # single-board computer
 https://all3dp.com/1/single-board-computer-raspberry-pi-alternative/
+https://www.electromaker.io/blog/article/best-single-board-computer-for-robotics#:~:text=The%20Best%20Single-Board%20Computer%20for%20Robotics%20-%20Best,for%20Robotics%205%205.%20ASUS%20Tinker%20Board%20S
+
+# LiDAR
+https://www.usgs.gov/ngp-standards-and-specifications/lidar-base-specification-tables
+https://www.blickfeld.com/blog/understanding-lidar-specifications/
+https://www.researchgate.net/figure/Lidar-System-Specifications_tbl1_51735167
+
+# camera 3D
+https://www.researchgate.net/figure/3D-cameras-specifications_tbl1_269323833
+
+# IMU
+https://www.vectornav.com/resources/inertial-navigation-primer/specifications--and--error-budgets/specs-imuspecs
+https://www.researchgate.net/figure/Specifications-of-typical-inertial-measurement-units-IMUS_tbl1_281049459
 
 # Installing
 
