@@ -29,6 +29,7 @@ https://www.electromaker.io/blog/article/best-single-board-computer-for-robotics
 https://www.usgs.gov/ngp-standards-and-specifications/lidar-base-specification-tables
 https://www.blickfeld.com/blog/understanding-lidar-specifications/
 https://www.researchgate.net/figure/Lidar-System-Specifications_tbl1_51735167
+https://www.sick.com/us/en/lidar-sensors/3d-lidar-sensors/multiscan100/multiscan136-1/p/p673512
 
 # camera 3D
 https://www.researchgate.net/figure/3D-cameras-specifications_tbl1_269323833
@@ -39,6 +40,7 @@ https://www.researchgate.net/figure/Specifications-of-typical-inertial-measureme
 https://support.sbg-systems.com/sc/el/latest/documentations-resources/ellipse-documentation/performance-specifications/raw-imu-specifications
 https://www.advancednavigation.com/tech-articles/inertial-measurement-unit-imu-an-introduction/#interpreting
 https://www.bosch-sensortec.com/media/boschsensortec/downloads/product_flyer/bst-bmi088-fl000.pdf
+https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi088/
 
 # motor driver
 https://www.geeetech.com/wiki/index.php/L298N_Motor_Driver_Board
@@ -46,6 +48,7 @@ https://www.etechnophiles.com/l293d-vs-l298n-motor-driver-differences-specificat
 https://www.ti.com/product/DRV8871
 https://www.globalspec.com/specsearch/searchform/motion_controls/controls_drives/dc_motor_drives
 https://components101.com/modules/l293n-motor-driver-module
+https://www.moonsindustries.com/p/m2dc-series-servo-drives/m2dc-6d05s-000004696351002294
 
 # encoder
 https://www.tamagawa-seiki.com/products/rotaryencoder/absolute-multiturn.html
@@ -55,6 +58,8 @@ https://www.encoder.com/product-datasheets
 https://assets.omron.eu/downloads/datasheet/en/v3/e6c3-c_rugged_incremental_rotary_encoder_datasheet_en.pdf
 https://www.globalspec.com/specsearch/searchform/sensors_transducers_detectors/encoders_resolvers/rotary_encoders
 https://www.ia.omron.com/products/family/487/specification.html
+https://www.encoder.com/hubfs/products/Model_A25SB/datasheet_model-a25sb.pdf?hsLang=en
+https://www.sensata.com/sites/default/files/a/sensata-dual%20encoder-usb%20converter-datasheet.pdf
 
 # battery
 https://www.iotforall.com/best-battery-for-robot#:~:text=So%2C%20let%E2%80%99s%20now%20specify%20the%20requirements%20for%20the,so%20the%20required%20capacity%20is%20500mAh.%20More%20items
@@ -62,6 +67,8 @@ https://www.generationrobots.com/en/402876-batterie-lipo-111v-1800mah-lb-012.htm
 https://www.generationrobots.com/en/307-batteries-for-robots
 https://www.lithium-battery-factory.com/product/agv-lithium-batteries-24v-60ah/
 https://www.ia.omron.com/products/family/3664/specification.html
+https://bs-battery.com/wp-content/uploads/2021/11/BSH-HU05_NIMH_LawnGarden_2021.pdf
+https://fulbat.com/product/fh-hu05/
 
 # Installing
 
