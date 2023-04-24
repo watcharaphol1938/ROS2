@@ -20,6 +20,7 @@ https://micro.ros.org/docs/overview/hardware/
 https://www.allonrobots.com/robot-microcontroller/
 https://jakobfriedl.tech/microcontrollers-in-robotics
 https://www.generationrobots.com/en/326-microcontrollers-and-development-boards
+https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano-developer-kit/
 
 # single-board computer
 https://all3dp.com/1/single-board-computer-raspberry-pi-alternative/
@@ -33,6 +34,7 @@ https://www.sick.com/us/en/lidar-sensors/3d-lidar-sensors/multiscan100/multiscan
 
 # camera 3D
 https://www.researchgate.net/figure/3D-cameras-specifications_tbl1_269323833
+https://ark.intel.com/content/www/us/en/ark/compare.html?productIds=123692,123721,126367,128255,128256,128257,190004,192742,201775,205847,212558,212559,212561,229218,229219,229673,230571,233194,92329,98316,98319,98320,99403
 
 # IMU
 https://www.vectornav.com/resources/inertial-navigation-primer/specifications--and--error-budgets/specs-imuspecs
