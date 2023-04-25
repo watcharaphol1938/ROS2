@@ -72,6 +72,9 @@ https://www.ia.omron.com/products/family/3664/specification.html
 https://bs-battery.com/wp-content/uploads/2021/11/BSH-HU05_NIMH_LawnGarden_2021.pdf
 https://fulbat.com/product/fh-hu05/
 
+# web app
+https://budibase.com/blog/how-to-make-a-web-app/
+
 # Installing
 
 https://www.vmware.com/products/workstation-player.html
