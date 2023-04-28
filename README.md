@@ -77,6 +77,7 @@ https://budibase.com/blog/how-to-make-a-web-app/
 https://unique-dev.net/login.aspx?cmd=0
 https://www.chartjs.org/docs/latest/getting-started/usage.html
 https://www.youtube.com/watch?v=XTqFjRlwMXA&t=4449s
+https://www.youtube.com/watch?v=FJDVKeh7RJI
 
 # Installing
 
