@@ -79,6 +79,9 @@ https://www.chartjs.org/docs/latest/getting-started/usage.html
 https://www.youtube.com/watch?v=XTqFjRlwMXA&t=4449s
 https://www.youtube.com/watch?v=FJDVKeh7RJI
 
+# anydesk
+https://blog.limitrack.com/howto-anydesk/
+
 # Installing
 
 https://www.vmware.com/products/workstation-player.html
